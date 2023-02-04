@@ -22,7 +22,7 @@ resource "local_file" "foo" {
   content  = <<EOF
     [{
         "roleAssignmentDescription": "Contributor role assignment for the current user",
-        "principalId": "${data.azurerm_client_config.current.object_id}",
+        "objectId": "${data.azurerm_client_config.current.object_id}",
         "roleDefinitionName": "Contributor",
         "scope": "/subscriptions/${data.azurerm_client_config.current.subscription_id}"
     }]
