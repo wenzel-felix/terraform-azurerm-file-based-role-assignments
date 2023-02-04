@@ -48,7 +48,7 @@ complex:
 
 The individual json-files consist of a list of objects like so:
 
-```json
+```
     [
         {
             (required parameters)
