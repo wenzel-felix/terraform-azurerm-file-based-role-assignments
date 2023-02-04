@@ -11,7 +11,7 @@ resource "azurerm_role_assignment" "main" {
   for_each             = local.role_assignments_map
   scope                = each.value.scope
   role_definition_name = each.value.roleDefinitionName
-  principal_id         = each.value.principalId
+  principal_id         = each.value.objectId
   description          = lookup(each.value, "roleAssignmentDescription", null)
   condition            = lookup(each.value, "condition", null)
   condition_version    = lookup(each.value, "conditionVersion", null)
